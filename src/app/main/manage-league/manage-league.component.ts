@@ -19,6 +19,19 @@ const BASE_URL = environment.baseUrl;
 export class ManageLeagueComponent implements OnInit {
 
   leagueForm: FormGroup;
+  sports = [
+    'Racing',
+    'Football',
+    'Cricket',
+    'Soccer',
+    'Basketball',
+    'Tennis',
+    'Baseball',
+    'Golf',
+    'Running',
+    'Volleyball',
+    'Dadminton',
+  ].sort();
 
   constructor(private router: Router,
     private _formBuilder: FormBuilder,
@@ -28,7 +41,8 @@ export class ManageLeagueComponent implements OnInit {
   ngOnInit() {
     this.leagueForm = this._formBuilder.group({
       Name: ['', [Validators.required]],
-      maxParticipants: [2, [Validators.required, Validators.min(2)]]
+      maxParticipants: [2, [Validators.required, Validators.min(2)]],
+      rules: ['', Validators.required]
     });
   }
 

@@ -3,7 +3,7 @@
   <div class="center">
     <div class="content-card" style="margin-top: 5px;">
       <div class="separator">
-        <h2 style="margin-top: 0 !important;">Leaderboard</h2>
+        <h2 style="margin-top: 0 !important;">Manage League</h2>
       </div>
       <div>
         <h3>Add Points</h3>
@@ -32,7 +32,7 @@
             <mat-form-field variant="outline">
               <input type="number" placeholder="Wickets" matInput formControlName="wickets">
             </mat-form-field>
-            <button [disabled]="pointsForm.invalid || selectedPlayerId === ''" mat-raised-button color="primary">Save</button>
+            <button [disabled]="pointsForm.invalid || selectedPlayerId === ''" mat-raised-button color="accent">Save</button>
           </form>
         </div>
       </div>

@@ -43,7 +43,7 @@ export class AddpointsComponent implements OnInit {
     });
 
     this.http
-      .get("http://182.189.94.159:27019/api/Player/getall")
+      .get("http://103.79.18.248:27019/api/Player/getall")
       .subscribe((x: any) => {
         this.options = x;
       });

@@ -11,7 +11,7 @@ const BASE_URL_APP = environment.apiUrl;
 export class LoginService {
 
   constructor(private http: HttpClient) { }
-  baseurl = "http://182.189.94.159:27019/api/Register/login"
+  baseurl = "http://103.79.18.248:27019/api/Register/login"
 
   Login(payload){
     return new Promise((resolve,reject) => {

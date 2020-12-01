@@ -36,13 +36,13 @@ export class ManageTeamComponent implements OnInit {
         //call api and fill options[]
         //call api and fill data[]
         this.http
-            .get("http://182.189.94.159:27019/api/Teams/get")
+            .get("http://103.79.18.248:27019/api/Teams/get")
             .subscribe((x: any) => {
                 this.data = x;
                 this.dataSource = new MatTableDataSource(this.data);
             });
         this.http
-            .get("http://182.189.94.159:27019/api/Player/getall")
+            .get("http://103.79.18.248:27019/api/Player/getall")
             .subscribe((x: any) => {
                 this.options = x;
             });
@@ -91,7 +91,7 @@ export class ManageTeamComponent implements OnInit {
         console.log(this.data);
         this.http
             .post(
-                "http://182.189.94.159:27019/api/Teams/addAll",
+                "http://103.79.18.248:27019/api/Teams/addAll",
                 this.data.map((x: any) => x.id)
             )
             .subscribe((x) => {

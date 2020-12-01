@@ -19,9 +19,9 @@ export class DashComponent implements OnInit {
   displayedColumns: string[] = [
     'league',
     'players',
+    'info',
     'more'
   ];
-  filter = 'my_gyms';
   myLeagues: MatTableDataSource<any>;
   joinedLeagues: MatTableDataSource<any>;
 
@@ -48,6 +48,10 @@ export class DashComponent implements OnInit {
         this.joinedLeagues = new MatTableDataSource(res);
       })
       .catch(err => console.log(err));
+
+  }
+
+  showRules(id){
 
   }
 

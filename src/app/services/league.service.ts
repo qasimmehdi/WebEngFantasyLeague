@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
     providedIn: "root",
 })
 export class LeagueService {
-    baseurl = "http://182.189.94.159:27019/api/Leagues/";
+    baseurl = "http://103.79.18.248:27019/api/Leagues/";
     constructor(private http: HttpClient) { }
 
     addLeague(payload) {
@@ -55,7 +55,7 @@ export class LeagueService {
 
     addPoints(data) {
         return new Promise((resolve, reject) => {
-            this.http.post("http://182.189.94.159:27019/api/Points/addBatch", data).subscribe(
+            this.http.post("http://103.79.18.248:27019/api/Points/addBatch", data).subscribe(
                 (x) => resolve(x),
                 (err) => reject(err)
             );

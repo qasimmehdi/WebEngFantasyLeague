@@ -3,12 +3,12 @@
   <div class="center">
     <div class="content-card" style="margin-top: 5px;">
       <div class="separator">
-        <h1 style="margin-top: 0 !important;text-align: center;">Your Leagues</h1>
+        <h1 style="margin-top: 0 !important;text-align: center;">Fantasy League</h1>
       </div>
       <div>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <h2>Managing</h2>
-          <button mat-raised-button color="primary" [routerLink]="'/manage-league'">
+          <button mat-raised-button color="accent" [routerLink]="'/manage-league'">
             Create League
           </button>
         </div>
@@ -32,10 +32,19 @@
               </mat-cell>
             </ng-container>
 
+            <ng-container matColumnDef="info">
+              <mat-header-cell style="max-width: 89px" *matHeaderCellDef></mat-header-cell>
+              <mat-cell style="max-width: fit-content;" *matCellDef="let league">
+                <button mat-raised-button color="accent" (click)="showRules(league.id)">
+                  Rules
+                </button>
+              </mat-cell>
+            </ng-container>
+
             <ng-container matColumnDef="more">
               <mat-header-cell style="max-width: 89px" *matHeaderCellDef></mat-header-cell>
               <mat-cell style="max-width: fit-content;" *matCellDef="let league">
-                <button mat-raised-button color="primary" [routerLink]="'/add-points/'+league.id">
+                <button mat-raised-button color="accent" [routerLink]="'/add-points/'+league.id">
                   Manage
                 </button>
               </mat-cell>
@@ -56,7 +65,7 @@
       <div style="margin-top: 10px;">
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <h2>Participating</h2>
-          <button mat-raised-button color="primary" [routerLink]="'/leagues'">
+          <button mat-raised-button color="accent" [routerLink]="'/leagues'">
             Join League
           </button>
         </div>
@@ -80,10 +89,19 @@
               </mat-cell>
             </ng-container>
 
+            <ng-container matColumnDef="info">
+              <mat-header-cell style="max-width: 89px" *matHeaderCellDef></mat-header-cell>
+              <mat-cell style="max-width: fit-content;" *matCellDef="let league">
+                <button mat-raised-button color="accent">
+                  Rules
+                </button>
+              </mat-cell>
+            </ng-container>
+
             <ng-container matColumnDef="more">
               <mat-header-cell style="max-width: 89px" *matHeaderCellDef></mat-header-cell>
               <mat-cell style="max-width: fit-content;" *matCellDef="let league">
-                <button mat-raised-button color="primary" [routerLink]="'/manage-team/'+league.id">
+                <button mat-raised-button color="accent" [routerLink]="'/manage-team/'+league.id">
                   Edit Team
                 </button>
               </mat-cell>

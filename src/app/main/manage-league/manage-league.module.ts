@@ -4,7 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import {
   MatButtonModule,
-  MatCardModule, MatFormFieldModule, MatInputModule
+  MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule
 } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../auth-guard.service';
@@ -14,12 +14,12 @@ const routes: Routes = [
   {
       path     : 'manage-league',
       component: ManageLeagueComponent,
-      canActivate: [AuthGuard]
+      //canActivate: [AuthGuard]
   },
   {
     path     : 'manage-league/:id',
     component: ManageLeagueComponent,
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
 },
 ];
 
@@ -32,7 +32,8 @@ const routes: Routes = [
     MatButtonModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   declarations: [ManageLeagueComponent]
 })
